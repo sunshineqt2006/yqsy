@@ -1,0 +1,153 @@
+/* BOUNCE */
+
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+      transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+      transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+      opacity: 1;
+      transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+      transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+  }
+}
+
+
+@keyframes bounceOut {
+  20% {
+      transform: scale3d(0.9, 0.9, 0.9);
+  }
+  50%,
+  55% {
+      opacity: 1;
+      transform: scale3d(1.1, 1.1, 1.1);
+  }
+  to {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+.bounce-enter-active,
+.bounceIn,
+.bounce-leave-active,
+.bounceOut {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.bounce-enter-active,
+.bounceIn {
+  animation-name: bounceIn;
+}
+
+.bounce-leave-active,
+.bounceOut {
+  animation-name: bounceOut;
+}
+
+/* FADE */
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+.fade-enter-active,
+.fadeIn,
+.fade-leave-active,
+.fadeOut {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fade-enter-active,
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.fade-leave-active,
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+/* ROTATE */
+
+@keyframes rotateIn {
+  from {
+      transform-origin: center;
+      transform: rotate3d(0, 0, 1, -200deg);
+      opacity: 0;
+  }
+  to {
+      transform-origin: center;
+      transform: none;
+      opacity: 1;
+  }
+}
+
+@keyframes rotateOut {
+  from {
+      transform-origin: center;
+      opacity: 1;
+  }
+  to {
+      transform-origin: center;
+      transform: rotate3d(0, 0, 1, 200deg);
+      opacity: 0;
+  }
+}
+
+.rotate-enter-active,
+.rotateIn,
+.rotate-leave-active,
+.rotateOut {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.rotate-enter-active,
+.rotateIn {
+  animation-name: rotateIn;
+}
+
+.rotate-leave-active,
+.rotateOut {
+  animation-name: rotateOut;
+}
